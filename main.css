@@ -1,0 +1,425 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Picked from sbi theme */
+/* BUTTONS */
+.sbi-button {
+    border: none;
+    box-shadow: none;
+    border-radius: 34px;
+    font: 600 14px "Open Sans", sans-serif;
+    min-width: 180px;
+    height: 38px;
+    border: 1px solid transparent;
+    margin-bottom: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+    padding: 0 20px;
+}
+
+.sbi-button.primary {
+    color: #fff;
+    background-color: #00b1f2;
+}
+
+.sbi-button.primary:active,
+.sbi-button.primary:focus {
+    background-color: #00b1f2;
+}
+
+.sbi-button.primary:hover {
+    background: #26c5ff;
+}
+
+.sbi-button.outlined {
+    color: #00b1f2;
+    border: 1px solid #00b1f2;
+    background-color: #fff;
+}
+
+.sbi-button.outlined:hover {
+    color: #26c5ff;
+    border-color: #26c5ff;
+}
+
+.sbi-button:disabled,
+.sbi-button:disabled:hover,
+.sbi-button[disabled],
+.sbi-button[disabled]:hover {
+    background-color: #dadada;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.sbi-button.sbi-button-large {
+    height: 56px;
+    min-width: 280px;
+}
+.sbi-button.sbi-button-400{
+    width: 400px;
+}
+
+.sbi-button.noMargin {
+    margin-bottom: 0px;
+}
+
+.sbi-button.has-icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 24px;
+}
+
+.sbi-button.has-icon img {
+    width: 24px;
+    margin-right: -24px;
+}
+
+.sbi-button-group {
+    display: flex;
+    align-items: center;
+}
+
+.sbi-button-group .sbi-button {
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+
+.sbi-button-group.vertical {
+    flex-direction: column;
+    align-items: center;
+}
+
+.sbi-button-group.vertical .sbi-button {
+    margin: 0px 0px 20px 0px;
+}
+
+.sbi-button-group.space-top {
+    margin-top: 40px;
+}
+
+.sbi-button.outlined.rounded {
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+}
+
+.sbi-button.primary.rounded {
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+}
+
+body {
+    color: #2d2d2d;
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    font: 400 14px "Open Sans", sans-serif;
+}
+
+h4,
+h5,
+h6 {
+    font: 600 14px "Open Sans", sans-serif;
+}
+
+a,
+a:hover,
+.sbi-link {
+    cursor: pointer;
+    font: 400 14px "Open Sans", sans-serif;
+    color: #00b1f2;
+}
+/* Picked from sbi theme end */
+body{
+    margin: 0;
+    padding: 0;
+}
+.sbi-logo {
+    height: 22px;
+}
+
+
+.ta-text.blue {
+    color: #00B1F2
+}
+
+.ta-container {
+    width: 100%;
+    padding: 20px;
+    max-width: 1180px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: relative;
+}
+
+.ta-container.paddedtb {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.bg-gray {
+    background: #EBE6E6;
+}
+
+.ta-internal-container {
+    max-width: 1440px;
+}
+
+.ta-centered-section {
+    background: #fff;
+    min-height: calc(100vh - 105px);
+}
+
+.ta-status-header {
+    position: relative;
+}
+
+.ta-status-header img {
+    position: absolute;
+    right: 40px;
+    height: 115px;
+    bottom: 0;
+}
+
+.ta-status-header-title {
+    padding: 20px 40px;
+    margin: 0;
+}
+
+.ta-status-header-content {
+    background-color: #F2F7FD;
+    padding: 20px 40px;
+}
+
+.ta-content-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    width: 100%;
+}
+
+.ta-content-item {
+    min-width: 15%;
+    margin-right: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    display: none;
+}
+.ta-status-header-content.has-delivery-details .ta-content-item.courier-name,
+.ta-status-header-content.has-delivery-details .awb-number,
+.ta-status-header-content.has-delivery-details .track-link,
+.ta-content-item.active{
+    display: inline-flex;
+}
+.ta-status-header-content ~ .mailbox-image{
+    display: none;
+}
+.ta-status-header-content.has-delivery-details ~ .application-image{
+    display: none;
+}
+.ta-status-header-content.has-delivery-details ~ .mailbox-image{
+    display: block;
+}
+.ta-content-item>p {
+    color: #8A8A96;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.ta-content-item>span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Status Sectoin */
+.ta-status-section {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 20px rgba(213, 213, 234, 0.7);
+    border-radius: 18px;
+    margin: 40px;
+    width: calc(100% - 80px);
+    padding: 40px 20px 60px 20px;
+    position: relative;
+    z-index: 0;
+}
+.ta-timeline{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #8A8A96;
+    width: calc(100% - 220px);
+    margin-left: 90px;
+    top: 71px;
+    z-index: -1;
+    transition: width 1s;
+}
+.ta-timeline.to-step-2 .ta-timeline-track{
+    width: 33.33%;
+}
+.ta-timeline.to-step-3 .ta-timeline-track{
+    width: 66.66%;
+}
+.ta-timeline.to-step-4 .ta-timeline-track{
+    width: 100%;
+}
+.ta-timeline-track{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #56B793;
+    transition: .5s;
+}
+.ta-status-step-list {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Status Step  */
+.ta-status-step {
+    width: 180px;
+    text-align: center;
+}
+.ta-status-step .ta-status-step-img,
+.ta-status-step .ta-status-step-title,
+.ta-status-step .ta-status-step-message{
+    opacity: .5;
+}
+.ta-status-step.declined .ta-status-step-img,
+.ta-status-step.declined .ta-status-step-title,
+.ta-status-step.declined .ta-status-step-message,
+.ta-status-step.completed .ta-status-step-img,
+.ta-status-step.completed .ta-status-step-title,
+.ta-status-step.completed .ta-status-step-message,
+.ta-status-step.current .ta-status-step-img,
+.ta-status-step.current .ta-status-step-title,
+.ta-status-step.current .ta-status-step-message
+{
+    opacity: 1;
+}
+.ta-status-step.declined,
+.ta-status-step.completed,
+.ta-status-step.current{
+    opacity: 1;
+}
+.ta-status-step .ta-status-step-img.error,
+.ta-status-step.declined .ta-status-step-img{
+    display: none;
+}
+.ta-status-step.declined .ta-status-step-img.error{
+    display: inline-block;
+}
+.ta-status-step-img {
+    width: 55px;
+}
+
+.ta-status-step-title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-top: 0;
+    color: #2D2D2D
+}
+
+.ta-status-step.current .ta-status-step-title {
+    color: #00B1F2;
+}
+.ta-status-step.declined .ta-status-step-title {
+    color: #F74747;
+}
+.ta-status-step.return .ta-status-step-message.return,
+.ta-status-step.declined .ta-status-step-message.error,
+.ta-status-step.completed .ta-status-step-message.done,
+.ta-status-step.current .ta-status-step-message.progress{
+    display: block;
+}
+.ta-status-step.current.return .ta-status-step-message.progress{
+    display: none;
+}
+.ta-status-step-message {
+    color: #2d2d2d;
+    font-size: 10px;
+    display: none;
+    width: 200px;
+    margin-left: -10px;
+}
+.ta-status-icons{
+    margin-bottom: 20px;
+}
+.ta-status-icons .progress-icon{
+
+}
+.ta-status-step.declined .ta-status-icons .progress-icon,
+.ta-status-step.declined .ta-status-icons .done-icon,
+.ta-status-step.completed .ta-status-icons .progress-icon,
+.ta-status-icons .error-icon,
+.ta-status-icons .done-icon{
+    display: none;
+}
+.ta-status-step.declined .ta-status-icons .error-icon,
+.ta-status-step.current .ta-status-icons .progress-icon,
+.ta-status-step.completed .ta-status-icons .done-icon{
+    display: inline-block;
+}
+
+.ta-sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.ta-sticky-footer button {
+    margin: 0;
+}
+.new-app,.inprocess-app{
+    display: none;
+}
+.new-app.active,
+.inprocess-app.active{
+    display: flex;
+}
+@media screen and (max-width:991px) {
+    .ta-status-step-list{
+        flex-direction: column;
+    }
+    .ta-status-step{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-left: 80px;
+        position: relative;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .ta-status-step br{
+        display: none;
+    }
+    .ta-status-step-message{
+        margin-left: 0;
+        width: auto;
+    }
+    .ta-status-icons{
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+    .ta-timeline{
+        top: 90px;       
+        transition: height 1s;
+        margin-left: 30px;
+        height: calc(100% - 267px);
+        width: 2px;
+    }
+}
