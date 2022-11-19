@@ -31,6 +31,7 @@ function manageSteps(step){
             document.querySelector('.ta-status-step#app-submission').classList.add('completed');
             document.querySelector('.ta-status-step#app-submission .ta-status-step-title').innerHTML = "Application <br> Submitted"
             document.querySelector('.ta-status-step#app-verification').classList.add('current');
+            document.querySelector('.ta-status-step#app-verification .ta-status-step-title').innerHTML = "Verification <br> in Progress"
             // Increase Track Length
             setTimeout(function(){                
                 document.querySelector('.ta-timeline').classList.add('to-step-2');
@@ -49,6 +50,7 @@ function manageSteps(step){
             document.querySelector('.ta-status-step#app-verification .ta-status-step-title').innerHTML = "Application <br> Verified"
             document.querySelector('.ta-status-step#app-approval').classList.add('completed');
             document.querySelector('.ta-status-step#app-approval .ta-status-step-title').innerHTML = "Application <br> Approved"
+            
             document.querySelector('.ta-status-step#card-delivery').classList.add('current');
             // Increase Track Length
             setTimeout(function(){                

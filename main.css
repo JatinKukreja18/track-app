@@ -316,10 +316,10 @@ body{
 {
     opacity: 1;
 }
-.ta-status-step.declined .ta-status-step-message,
+/* .ta-status-step.declined .ta-status-step-message,
 .ta-status-step.current .ta-status-step-message{
     font-weight: 600;
-}
+} */
 .ta-status-step.declined,
 .ta-status-step.completed,
 .ta-status-step.current{
@@ -518,10 +518,15 @@ body{
         width: 2px;
     }    
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
+    .sbi-button
     .ta-content-item{
         width: 50%;
         margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .ta-content-item>p{
+        margin-bottom: 8px;
     }
     .ta-timeline.to-step-2 .ta-timeline-track{
         height: 33.33%;
@@ -595,12 +600,17 @@ body{
 .ta-error-section{
     text-align: center;
     margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 .ta-error-section img{
     margin-bottom: 40px;
+    height: 23vh;
 }
 .ta-error-section h1{
     font-size: 20px;
+    margin-top: 0;
     font-weight: 600;
     line-height: 27px;
     text-align: center;
@@ -631,4 +641,29 @@ body{
 }
 .ta-help-footer-ctas span{
     margin-bottom: 15px ;
+}
+
+@media screen and (max-width:767px) {
+    .ta-error-main{
+        min-height: calc(100vh - 166px);   
+    }
+    .ta-error-section{
+        padding-right: 16px;
+        padding-left: 16px;
+        padding-bottom: 30px;
+    }
+    .ta-error-section-ctas button{
+        width: 100%;
+        max-width: 400px;
+    }
+    .ta-error-section img{
+        height: auto;
+        width: 100%;
+        max-width: 383px;
+    }
+    .ta-help-footer{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 96px;
+    }
 }

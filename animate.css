@@ -1,0 +1,63 @@
+.ta-status-step-list > div{
+    opacity: 0 !important;
+    transition: opacity .5s;
+}
+.ta-status-step-list > div.fadedin{
+    opacity: 1 !important;
+}
+/* .ta-timeline{
+    opacity: 0;
+    transition: opacity .2s;
+}
+.ta-timeline.fadein{
+    opacity: 1;
+} */
+.ta-timeline.has-5-steps .ta-timeline-track{
+    transition: 4s;
+    transition-timing-function: linear;
+    /* transition-delay: 1s; */
+}
+.ta-timeline .ta-timeline-track{
+    transition: 3s;
+    transition-delay: .5s;
+}
+/* .ta-timeline.fadein .ta-timeline-track{
+    width: inherit !important;
+} */
+
+/* .inactive-icon{
+    display: inline;
+    position: absolute;
+    transform: scale(0);
+} */
+
+/* .return .ta-status-icons img, */
+.current .ta-status-icons img{
+    animation: breath infinite 2s;
+}
+.ta-status-icons.jump{
+    animation: jump 1 .5s;
+}
+@keyframes breath {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes jump {
+    0%{
+        transform: scale(.9);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
