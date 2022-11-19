@@ -8,7 +8,7 @@
     border: none;
     box-shadow: none;
     border-radius: 34px;
-    font: 600 14px "Open Sans", sans-serif;
+    font: 400 14px "Open Sans", sans-serif;
     min-width: 180px;
     height: 38px;
     border: 1px solid transparent;
@@ -18,7 +18,13 @@
     transition: 0.3s;
     padding: 0 20px;
 }
-
+.sbi-button.link{
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-weight: 400;
+}
 .sbi-button.primary {
     color: #fff;
     background-color: #00b1f2;
@@ -147,7 +153,9 @@ body{
 .ta-text.blue {
     color: #00B1F2
 }
-
+.ta-main-header{
+    border: 1px solid #F2F2FD;
+}
 .ta-container {
     width: 100%;
     padding: 20px;
@@ -183,18 +191,20 @@ body{
 .ta-status-header img {
     position: absolute;
     right: 40px;
-    height: 115px;
+    height: 95px;
     bottom: 0;
 }
 
 .ta-status-header-title {
-    padding: 20px 40px;
+    padding: 15px 40px;
     margin: 0;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .ta-status-header-content {
     background-color: #F2F7FD;
-    padding: 20px 40px;
+    padding: 15px 40px;
 }
 
 .ta-content-item-list {
@@ -232,6 +242,7 @@ body{
     color: #8A8A96;
     font-size: 11px;
     margin-bottom: 12px;
+    margin-top: 0;
 }
 
 .ta-content-item>span {
@@ -244,32 +255,24 @@ body{
     background: #FFFFFF;
     box-shadow: 0px 1px 20px rgba(213, 213, 234, 0.7);
     border-radius: 18px;
-    margin: 40px;
+    margin: 20px 40px;
     width: calc(100% - 80px);
-    padding: 40px 20px 60px 20px;
+    padding: 20px 20px 20px 20px;
     position: relative;
     z-index: 0;
 }
 .ta-timeline{
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background-color: #8A8A96;
-    width: calc(100% - 220px);
+    width: calc(100% - 190px);
     margin-left: 90px;
-    top: 71px;
+    top: 10px;
     z-index: -1;
-    transition: width 1s;
+    /* transition: width 1s; */
 }
-.ta-timeline.to-step-2 .ta-timeline-track{
-    width: 33.33%;
-}
-.ta-timeline.to-step-3 .ta-timeline-track{
-    width: 66.66%;
-}
-.ta-timeline.to-step-4 .ta-timeline-track{
-    width: 100%;
-}
+
 .ta-timeline-track{
     position: absolute;
     top: 0;
@@ -277,18 +280,20 @@ body{
     width: 0%;
     height: 2px;
     background-color: #56B793;
-    transition: .5s;
+    transition: 1s;
 }
 .ta-status-step-list {
     display: flex;
-    margin-top: 20px;
+    margin-top: 0px;
     width: 100%;
     justify-content: space-between;
 }
 
 /* Status Step  */
 .ta-status-step {
-    width: 180px;
+    width: 200px;
+    padding-left:10px ;
+    padding-right:10px ;
     text-align: center;
 }
 .ta-status-step .ta-status-step-img,
@@ -304,9 +309,16 @@ body{
 .ta-status-step.completed .ta-status-step-message,
 .ta-status-step.current .ta-status-step-img,
 .ta-status-step.current .ta-status-step-title,
-.ta-status-step.current .ta-status-step-message
+.ta-status-step.current .ta-status-step-message,
+.ta-status-step.return .ta-status-step-img,
+.ta-status-step.return .ta-status-step-title,
+.ta-status-step.return .ta-status-step-message
 {
     opacity: 1;
+}
+.ta-status-step.declined .ta-status-step-message,
+.ta-status-step.current .ta-status-step-message{
+    font-weight: 600;
 }
 .ta-status-step.declined,
 .ta-status-step.completed,
@@ -325,10 +337,11 @@ body{
 }
 
 .ta-status-step-title {
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin-bottom: 10px;
+    font-size: 16px;
     margin-top: 0;
-    color: #2D2D2D
+    color: #2D2D2D;
+    font-weight: 400;
 }
 
 .ta-status-step.current .ta-status-step-title {
@@ -354,22 +367,31 @@ body{
     margin-left: -10px;
 }
 .ta-status-icons{
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    line-height: 1;
 }
-.ta-status-icons .progress-icon{
 
-}
 .ta-status-step.declined .ta-status-icons .progress-icon,
 .ta-status-step.declined .ta-status-icons .done-icon,
 .ta-status-step.completed .ta-status-icons .progress-icon,
+.ta-status-step.declined .ta-status-icons .inactive-icon,
+.ta-status-step.return .ta-status-icons .inactive-icon,
+.ta-status-step.completed .ta-status-icons .inactive-icon,
+.ta-status-step.current .ta-status-icons .inactive-icon,
+.ta-status-icons .progress-icon,
 .ta-status-icons .error-icon,
 .ta-status-icons .done-icon{
     display: none;
 }
+
 .ta-status-step.declined .ta-status-icons .error-icon,
 .ta-status-step.current .ta-status-icons .progress-icon,
+.ta-status-step.return .ta-status-icons .progress-icon,
 .ta-status-step.completed .ta-status-icons .done-icon{
     display: inline-block;
+}
+.ta-status-step:not(.current):not(.return):not(.completed):not(.declined) .ta-status-icons{
+    filter: grayscale(100%);
 }
 
 .ta-sticky-footer {
@@ -377,6 +399,7 @@ body{
     bottom: 0;
     left: 0;
     width: 100%;
+    box-shadow: 0px 1px 20px rgba(213, 213, 234, 0.7);
     background-color: #fff;
 }
 
@@ -390,9 +413,81 @@ body{
 .inprocess-app.active{
     display: flex;
 }
+.offer-image{
+    
+    justify-content: center;
+    margin-top: 20px;
+    display: none;
+}
+.ta-step-section{
+    position: relative;
+}
+
+.offer-image.activate{
+    display: flex;
+}
+.offer-image-mob{
+    display: none;
+}
+@media screen and (min-width:992px) {
+    .ta-timeline.to-step-2 .ta-timeline-track{
+        width: 33.33%;
+    }
+    .ta-timeline.to-step-3 .ta-timeline-track{
+        width: 66.66%;
+    }
+    .ta-timeline.to-step-4 .ta-timeline-track{
+        width: 100%;
+    }
+
+    .ta-timeline.has-5-steps.to-step-2 .ta-timeline-track{
+        width: 25%;
+    }
+    .ta-timeline.has-5-steps.to-step-3 .ta-timeline-track{
+        width: 50%;
+    }
+    .ta-timeline.has-5-steps.to-step-4 .ta-timeline-track{
+        width: 75%;
+    }
+    .ta-timeline.has-5-steps.to-step-5 .ta-timeline-track{
+        width: 100%;
+    }
+}
 @media screen and (max-width:991px) {
+    .offer-image-mob{
+        display: inline-block;
+    }
+    .offer-image-desk{
+        display: none;
+    }
+    .ta-timeline-track{
+        height: 0;
+        width: 2px;
+    }
+    .ta-timeline.to-step-2 .ta-timeline-track{
+        height: 33.33%;
+    }
+    .ta-timeline.to-step-3 .ta-timeline-track{
+        height: 66.66%;
+    }
+    .ta-timeline.to-step-4 .ta-timeline-track{
+        height: 100%;
+    }
+    .ta-timeline.has-5-steps.to-step-2 .ta-timeline-track{
+        height: 25%;
+    }
+    .ta-timeline.has-5-steps.to-step-3 .ta-timeline-track{
+        height: 50%;
+    }
+    .ta-timeline.has-5-steps.to-step-4 .ta-timeline-track{
+        height: 75%;
+    }
+    .ta-timeline.has-5-steps.to-step-5 .ta-timeline-track{
+        height: 100%;
+    }
     .ta-status-step-list{
         flex-direction: column;
+        margin-top: 0;
     }
     .ta-status-step{
         display: flex;
@@ -416,10 +511,124 @@ body{
         top: 20px;
     }
     .ta-timeline{
-        top: 90px;       
-        transition: height 1s;
+        top: 30px;       
+        /* transition: height 1s; */
         margin-left: 30px;
-        height: calc(100% - 267px);
+        height: calc(100% - 138px);
         width: 2px;
+    }    
+}
+@media screen and (max-width:768px) {
+    .ta-content-item{
+        width: 50%;
+        margin-right: 0;
     }
+    .ta-timeline.to-step-2 .ta-timeline-track{
+        height: 33.33%;
+    }
+    .ta-timeline.to-step-3 .ta-timeline-track{
+        height: 66.66%;
+    }
+    .ta-timeline.to-step-4 .ta-timeline-track{
+        height: 100%;
+    }
+    .ta-container{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .ta-status-header-title{
+        font-size: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .ta-status-header-content{
+        padding-left: 16px;
+        padding-right: 16px;   
+    }
+    .ta-status-section{
+        width: calc(100% - 32px);
+        margin: 20px 16px;
+        padding: 20px 0px;
+    }
+    .ta-status-step-title{
+        font-size: 20px;
+    }
+    .ta-status-step-message{
+        font-size: 14px;
+    }
+    .ta-status-step{
+        padding-left: 64px;
+        height: 140px;
+    }
+    .ta-timeline{
+        /* top: 70px; */
+        height: calc(100% - 176px);
+    }
+    /* .ta-timeline.has-5-steps{
+        height: calc(100% - 200px);
+    } */
+    .application-image,.mailbox-image{
+        display: none !important;
+    }
+    .ta-container.mobile-less-padd{
+        padding: 0;
+    }
+    .ta-sticky-footer{
+        position: relative;
+    }
+    .ta-footer-ctas.new-app{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .sbi-button.sbi-button-400{
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+
+
+/* Error Pages */
+.ta-error-section{
+    text-align: center;
+    margin-top: 20px;
+}
+.ta-error-section img{
+    margin-bottom: 40px;
+}
+.ta-error-section h1{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.ta-error-section p{
+    font-size: 14px;
+    line-height: 27px;
+}
+.ta-help-footer{
+    background-color: #F2F7FD;
+    width: 100%;
+    height: 130px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+.ta-help-footer-ctas{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+}
+.ta-error-main{
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+}
+.ta-help-footer-ctas span{
+    margin-bottom: 15px ;
 }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main-ecard.js"></script>
+    <title>Track App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+        </style>
+</head>
+
+<body>
+    <header class="ta-main-header">
+        <div class="ta-container">
+            <img src="./assets/sbi-logo.png" class="sbi-logo" alt="" srcset="">
+        </div>
+    </header>
+    <main class="bg-gray">
+        <div class="ta-container mobile-less-padd">
+
+            <div class="ta-centered-section">
+                <header class="ta-status-header">
+                    <h2 class="sbi-heading ta-status-header-title">
+                        <span id="main-status">Current Status: Application Submission</span>
+                    </h2>
+                    <div class="ta-status-header-content " >
+                        <div class="ta-content-item-list">
+                            <div class="ta-content-item active app-num">
+                                <p>Application Number</p>
+                                <span>23451625432</span>
+                            </div>
+                            <div class="ta-content-item courier-name">
+                                <p>Courier Name</p>
+                                <span>Blue Dart</span>
+                            </div>
+                            <div class="ta-content-item awb-number">
+                                <p>AWB Number</p>
+                                <span>52635242415</span>
+                            </div>
+                            <div class="ta-content-item track-link">
+                                <a href="">Track your Card delivery</a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./assets/mailbox.png" class="mailbox-image">
+                    <img src="./assets/application.png" class="application-image">
+                </header>
+                <section class="ta-status-section">
+                    <div class="ta-step-section">
+
+                    <div class="ta-timeline has-5-steps">
+                        <span class="ta-timeline-track"></span>
+                    </div>
+                    <div class="ta-status-step-list">
+                        <div class="ta-status-step current" id="app-submission">
+                            <div class="ta-status-icons">
+                                <img src="./assets/progress.svg" alt="progress" class="progress-icon">
+                                <img src="./assets/circle.svg" alt="inactive" class="inactive-icon">
+                                <img src="./assets/done.svg" alt="done" class="done-icon">
+                            </div>
+                            <img src="./assets/Submitted.png" class="ta-status-step-img" alt="">
+                            <h5 class="sbi-text blue ta-status-step-title ">Application <br> submission</h5>
+                            <span class="ta-status-step-message progress">
+                                Your application submission is in progress.
+                            </span>
+                            <span class="ta-status-step-message done">Your application has been completed.</span>
+                        </div>
+                        <div class="ta-status-step " id="app-verification">
+                            <div class="ta-status-icons">
+                                <img src="./assets/progress.svg" alt="progress" class="progress-icon">
+                                <img src="./assets/circle.svg" alt="inactive" class="inactive-icon">
+                                <img src="./assets/done.svg" alt="done" class="done-icon">
+                            </div>
+                            <img src="./assets/Verified.png" class="ta-status-step-img" alt="">
+                            <h5 class="sbi-text blue ta-status-step-title ">Application<br> Verification</h5>
+                            <span class="ta-status-step-message progress">
+                                Your application is under policy checks and verification.
+                            </span>
+                            <span class="ta-status-step-message done">We have verified your application details.</span>
+                        </div>
+                        <div class="ta-status-step" id="app-approval">
+                            <div class="ta-status-icons">
+                                <img src="./assets/progress.svg" alt="progress" class="progress-icon">
+                                <img src="./assets/circle.svg" alt="inactive" class="inactive-icon">
+                                <img src="./assets/done.svg" alt="done" class="done-icon">
+                                <img src="./assets/error.svg" alt="error" class="error-icon">
+                            </div>
+                            <img src="./assets/Approved.png" class="ta-status-step-img" alt="">
+                            <img src="./assets/Rejected.png" class="ta-status-step-img error" alt="">
+                            <h5 class="sbi-text blue ta-status-step-title ">Application<br> Approval</h5>
+                            <span class="ta-status-step-message progress">
+                                Your application approval is in progress.
+                            </span>
+                            <span class="ta-status-step-message done">Your application has been approved!</span>
+                            <span class="ta-status-step-message error">Your Application could not be processed as it does not meet our policy.</span>
+                        </div>
+                        <div class="ta-status-step" id="ecard-delivery">
+                            <div class="ta-status-icons">
+                                <img src="./assets/progress.svg" alt="progress" class="progress-icon">
+                                <img src="./assets/circle.svg" alt="inactive" class="inactive-icon">
+                                <img src="./assets/done.svg" alt="done" class="done-icon">
+                                <img src="./assets/error.svg" alt="error" class="error-icon">
+                            </div>
+                            <img src="./assets/e-card.png" class="ta-status-step-img" alt="">
+                            <img src="./assets/Rejected.png" class="ta-status-step-img error" alt="">
+                            <h5 class="sbi-text blue ta-status-step-title ">E-Card<br> Delivery</h5>
+                            <span class="ta-status-step-message progress">
+                                Your E-Card is on it’s way and will be sent to your registered email ID XXXXX@gmail.com.
+                            </span>
+                            <span class="ta-status-step-message done">Your E-Card has been delivered!</span>
+                        </div>
+                        <div class="ta-status-step" id="card-delivery">
+                            <div class="ta-status-icons">
+                                <img src="./assets/progress.svg" alt="progress" class="progress-icon">
+                                <img src="./assets/circle.svg" alt="inactive" class="inactive-icon">
+                                <img src="./assets/done.svg" alt="done" class="done-icon">
+                            </div>
+                            <img src="./assets/delivery.png" class="ta-status-step-img" alt="">
+                            <h5 class="sbi-text blue ta-status-step-title ">Physical Card<br> Delivery</h5>
+                            <span class="ta-status-step-message progress">
+                                Your physical card has been dispatched! It's on it's way to you.
+                            </span>
+                            <span class="ta-status-step-message done">Your physical card has been delivered to
+                                you!</span>
+                            <span class="ta-status-step-message return">Your physical card is being returned to origin.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer-image">
+                    <img src="./assets/offer_desktop.png" class="offer-image-desk">
+                    <img src="./assets/offer_mobile.png" class="offer-image-mob">
+                </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="ta-sticky-footer">
+        <div class="ta-container">
+            <div class="ta-footer-ctas sbi-button-group new-app active">
+                <button class="ta-button sbi-button primary sbi-button-400">Complete Application Now</button>
+                <a href="" class="ta-link sbi-link">Back to Home</a>
+            </div>
+            <div class="ta-footer-ctas inprocess-app">
+                <button class="ta-button sbi-button primary sbi-button-400">Back to Home</button>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
